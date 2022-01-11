@@ -1,0 +1,31 @@
+@media screen and (max-width: 600px) {
+    
+    .home-content {
+        border: 2px solid darkgreen;
+
+        width: 100%;
+        min-height: 100px;
+        margin:auto;
+
+        text-align: center;
+    }
+}
+
+@media screen and (min-width: 600px) {
+    
+    .home-content {
+        border: 2px solid darkgreen;
+
+        width: 400px;;
+        min-height: 100px;
+        min-width: 350px;
+
+        margin:auto;
+
+        text-align: center;
+    }
+}
+
+.home-content-container {
+    height: 100vh;
+}
