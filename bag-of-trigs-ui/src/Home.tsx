@@ -20,7 +20,7 @@ export default function Home() {
                     <Button variant="outline-dark">Find a trig point!</Button>
                 </div>
             </div>
-            <Navbar bg="transparent" expand="lg" fixed="bottom"><p className='footer-content'>Blatherwick 2022</p></Navbar>
+            <Navbar bg="transparent" expand="lg" fixed="bottom"><p className='footer-content'>lucyblatherwick - 2022</p></Navbar>
         </div>
   );
 }
