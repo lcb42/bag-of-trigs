@@ -1,0 +1,22 @@
+.trig-tile {
+    min-height: 100px;
+    min-width: 100px;
+
+    margin: 20px;
+
+    text-align: left;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.trig-tile-container {
+    flex-flow: wrap;
+
+}
+
+
+
+.page-wrap {
+    padding-top: 70px;
+    padding-left: 20%;
+    padding-right: 20%;
+}
