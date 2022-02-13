@@ -3,8 +3,6 @@ const app = express();
 const port = process.env.PORT || 5000;
 
 const fs = require("fs");
-const csv = require("csv");
-const { stringify } = require('querystring');
 
 
 // ENABLING FUNCTIONS //
