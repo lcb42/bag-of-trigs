@@ -1,6 +1,6 @@
 *** TO DO LIST for BAG OF TRIGS ***
 
 BoT-1: Component-ise nav bar [DONE]
-BoT-2: Move nav bar to app level [In Progress]
+BoT-2: Move nav bar to app level [DONE]
 3: Migrate to sass [ToDo]
 4: Add mobile/tablet/desktop styling [ToDo]
