@@ -36,3 +36,26 @@
     transform: rotate(360deg);
   }
 }
+
+.page-wrap {
+  height: 100vh;
+}
+
+.page-wrap:before {
+  content: "";
+  background-image: url("../public/images/trigPic1.jpg");
+  background-size: cover;
+  background-position: center;
+  opacity: 0.4;
+
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+}
+
+.footer-content {
+  margin: auto;
+  color: grey;
+}
