@@ -1,10 +1,23 @@
+import { useEffect, useState } from 'react';
 import './Trigs.css';
+import axios from 'axios';
 
 import Navbar from "react-bootstrap/Navbar"
 import Container from "react-bootstrap/Container"
-import Card from "react-bootstrap/Card"
+
+import TrigTile from "./components/TrigTile"
 
 export default function Trigs() {
+    //const [data, setData] = useState({trigs: []});
+
+    useEffect(() => {
+        const getTrigs = async () => {
+            const result = await axios('/trigreq');
+            console.log(result);
+        };
+        getTrigs();
+    }, []);
+
     return (
         <div className='page-wrap'>
             <Navbar bg="transparent" expand="lg" fixed="top" className="navbar">
@@ -13,51 +26,9 @@ export default function Trigs() {
                 </Container>
             </Navbar>
             <div className='d-flex justify-content-center trig-tile-container'>
-                <div className="trig-tile">
-                    <Card border="dark" bg="transparent" style={{ width: '18rem'}}>
-                        <Card.Body>
-                            <Card.Title>Trig Title</Card.Title>
-                            <Card.Text>
-                                <div>
-                                    <p>Fact 1 about trig</p>
-                                    <p>Fact 2 about trig</p>
-                                    <p>Fact 3 about trig</p>
-                                    <p>etc...</p>
-                                </div>
-                            </Card.Text>
-                        </Card.Body>
-                    </Card>
-                </div>
-                <div className="trig-tile">
-                    <Card border="dark" bg="transparent" style={{ width: '18rem'}}>
-                        <Card.Body>
-                            <Card.Title>Trig Title 2</Card.Title>
-                            <Card.Text>
-                                <div>
-                                    <p>Fact 1 about trig</p>
-                                    <p>Fact 2 about trig</p>
-                                    <p>Fact 3 about trig</p>
-                                    <p>etc...</p>
-                                </div>
-                            </Card.Text>
-                        </Card.Body>
-                    </Card>
-                </div>
-                <div className="trig-tile">
-                    <Card border="dark" bg="transparent" style={{ width: '18rem'}}>
-                        <Card.Body>
-                            <Card.Title>Trig Title 3</Card.Title>
-                            <Card.Text>
-                                <div>
-                                    <p>Fact 1 about trig</p>
-                                    <p>Fact 2 about trig</p>
-                                    <p>Fact 3 about trig</p>
-                                    <p>etc...</p>
-                                </div>
-                            </Card.Text>
-                        </Card.Body>
-                    </Card>
-                </div>
+                <TrigTile title="Trig Title 1" trigFacts={[]} trigImgPath="/images/trigPic1.jpg"/>
+                <TrigTile title="Trig Title 2" trigFacts={[]}/>
+                <TrigTile title="Trig Title 3" trigFacts={[]}/>
             </div>
             <Navbar bg="transparent" expand="lg" fixed="bottom"><p className='footer-content'>lucyblatherwick - 2022</p></Navbar>
         </div>
