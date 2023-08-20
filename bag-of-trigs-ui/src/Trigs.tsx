@@ -22,7 +22,7 @@ export default function Trigs() {
         <div className='page-wrap'>
             <Navbar bg="transparent" expand="lg" fixed="top" className="navbar">
                 <Container>
-                    <Navbar.Brand href="#home">Bag of Trigs</Navbar.Brand>
+                    <Navbar.Brand href="/">Bag of Trigs</Navbar.Brand>
                 </Container>
             </Navbar>
             <div className='d-flex justify-content-center trig-tile-container'>

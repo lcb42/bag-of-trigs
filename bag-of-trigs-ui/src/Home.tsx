@@ -8,7 +8,7 @@ export default function Home() {
         <div className='page-wrap'>
             <Navbar bg="transparent" expand="lg" fixed="top" className="navbar">
                 <Container>
-                    <Navbar.Brand href="#home">Bag of Trigs</Navbar.Brand>
+                    <Navbar.Brand href="/">Bag of Trigs</Navbar.Brand>
                 </Container>
             </Navbar>
             <div className='d-flex flex-column justify-contents-center home-content-container'>
