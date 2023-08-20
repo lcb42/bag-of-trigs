@@ -1,16 +1,12 @@
 import './Home.css';
 
 import Navbar from "react-bootstrap/Navbar"
-import Container from "react-bootstrap/Container"
+import NavBar from './components/NavBar';
 
 export default function Home() {
     return (
         <div className='page-wrap'>
-            <Navbar bg="transparent" expand="lg" fixed="top" className="navbar">
-                <Container>
-                    <Navbar.Brand href="/">Bag of Trigs</Navbar.Brand>
-                </Container>
-            </Navbar>
+            <NavBar/>
             <div className='d-flex flex-column justify-contents-center home-content-container'>
                 <div className="home-content">
                     <h1>Welcome to Bag of Trigs!</h1>
