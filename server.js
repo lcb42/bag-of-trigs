@@ -21,9 +21,9 @@ app.get('/express_backend', (req, res) => {
     res.send({ express: 'YOUR EXPRESS BACKEND IS CONNECTED TO REACT'});
 })
 
-// a route to request all the trigs wiht default sorting
-app.get('/trigreq', (req, res) => {
+// a route to request all the trigs wiht default sorting and default page 1
+app.get('/trigs', (req, res) => {
     console.log('blob');
-    res.send({ trigs: TRIGS });
+    res.send(TRIGS[0]);
 });
 

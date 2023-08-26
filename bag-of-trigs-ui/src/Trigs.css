@@ -10,13 +10,8 @@
 
 .trig-tile-container {
     flex-flow: wrap;
-
 }
 
-
-
 .page-wrap {
-    padding-top: 70px;
-    padding-left: 20%;
-    padding-right: 20%;
+    padding: 70px 10%;
 }
