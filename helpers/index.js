@@ -1,36 +1,59 @@
 const fs = require('fs');
 
 function convertCSVtoJSON(data){
-    var lines = data.split("\n");
+  var lines = data.split("\n");
 
-    var result = [];
+  var result = [];
 
-    var headers = lines[0].toLowerCase().replaceAll(" ", "_").split(",");
+  var headers = lines[0].toLowerCase().replaceAll(" ", "_").split(",");
 
-    for(var i=1; i<lines.length;i++){
+  for(var i=1; i<lines.length;i++){
 
-        var obj = {};
-        var currentline = lines[i].split(",");
+    var obj = {};
+    var currentline = lines[i].split(",");
 
-        for(var j=0;j<headers.length;j++){
-            obj[headers[j]] = currentline[j];
-        }
-
-        result.push(obj);
+    for(var j=0;j<headers.length;j++){
+        obj[headers[j]] = currentline[j];
     }
 
-    return result;
+    result.push(obj);
+  }
+
+  return result;
+}
+
+function splitIntoPages(data, numPerPage){
+
+  const paginatedData = data.reduce((pages, item, index) => {
+    const pageNum = Math.floor(index/numPerPage);
+    const numOfPages = Math.ceil(data.length / numPerPage)
+
+    if(!pages[pageNum]) pages[pageNum] = {
+      pageNum: pageNum,
+      numOfPages: numOfPages,
+      pageData :[]
+    };
+
+    pages[pageNum].pageData.push(item);
+
+    return pages;
+  }, []);
+
+  return paginatedData;
 }
 
 class Helpers {
 
-    static readTrigsFile = (csvFilepath) => {
+  static readTrigsFile = (csvFilepath) => {
 
-        // open and real file contents
-        var data = fs.readFileSync(csvFilepath, 'utf8');
+    // open and real file contents
+    var data = fs.readFileSync(csvFilepath, 'utf8');
 
-        return convertCSVtoJSON(data)
-    }
+    var data = convertCSVtoJSON(data);
+    var data = splitIntoPages(data, 10);
+
+    return data;
+  }
 }
 
 module.exports = Helpers;
