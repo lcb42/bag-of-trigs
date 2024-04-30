@@ -1,0 +1,21 @@
+// App stylesheet
+@import 'src/site-variables.scss';
+
+.trig-tile {
+  background-color: rgba(white, 0.8);
+  border-radius: 5px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 25%;
+  padding: 10px;
+
+  p {
+    font-size: 1.0rem;
+    font-weight: $medium;
+    margin: 0;
+    text-align: center;
+  }
+}

@@ -1,9 +1,10 @@
 import { useEffect, useState } from 'react';
-import './Trigs.css';
 import axios from 'axios';
 
-import TrigTile from "./components/TrigTile";
-import { Trig } from "./types/Trig";
+import TrigTile from "../../components/TrigTile/TrigTile";
+import { Trig } from "../../types/Trig";
+
+import './_styles.scss';
 
 export default function Trigs() {
   const [trigData, setTrigData] = useState({numOfPages: 1, pageNum: 0, pageData: []});

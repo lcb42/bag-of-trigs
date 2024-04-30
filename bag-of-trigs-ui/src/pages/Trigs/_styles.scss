@@ -10,4 +10,6 @@
 
 .trig-tile-container {
     flex-flow: wrap;
+    display: flex;
+    flex-direction: row;
 }
