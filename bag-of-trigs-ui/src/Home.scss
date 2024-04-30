@@ -1,0 +1,22 @@
+// App stylesheet
+@import 'src/site-variables.scss';
+
+.home-content {
+  width: 40%;
+  min-height: 100px;
+  min-width: 350px;
+  margin:auto;
+  
+  text-align: center;
+  position: relative;
+  font-family: $body-font-family;
+
+  @include devices('fromDesktop'){
+    width: 100%;
+  }
+}
+
+.home-content-container {
+  height: 100%;
+  position: relative;
+}
