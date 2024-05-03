@@ -10,16 +10,14 @@ import Page from './templates/page';
 
 function App() {
   return (
-    <Router>
-      <div className='page-wrap'>
-        <Page>
-          <Routes>
-            <Route path="/" element={<Home />}/>
-            <Route path="/trigs" element={<Trigs />}/>
-          </Routes>
-        </Page>
-      </div>
-    </Router>
+    <Page>
+      <Router>
+        <Routes>
+          <Route path="/" element={<Home />}/>
+          <Route path="/trigs" element={<Trigs />}/>
+        </Routes>
+      </Router>
+    </Page>
   );
 }
 

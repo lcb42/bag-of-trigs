@@ -1,13 +1,13 @@
-import React from 'react';
 import NavBar from '../components/NavBar/NavBar';
+import { PropsWithChildren, ReactNode } from 'react';
 
-export default function Page(
-  children: Element,
-) {
+export default function Page({ children }: PropsWithChildren<{children: ReactNode}>) {
   return (
-    <div className="page">
+    <div className="page-wrap">
       <NavBar />
-      {children}
+      <div className="page-content">
+        {children}
+      </div>
     </div>
   )
 };
