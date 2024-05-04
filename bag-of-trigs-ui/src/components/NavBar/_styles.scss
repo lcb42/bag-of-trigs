@@ -1,2 +1,9 @@
 // App stylesheet
 @import 'src/site-variables.scss';
+
+.navbar {
+  height: 50px;
+  width: 100vw;
+  padding: 0 20px;
+  background-color: aliceblue;
+}
