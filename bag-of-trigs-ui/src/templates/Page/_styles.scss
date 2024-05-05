@@ -1,0 +1,26 @@
+@import 'src/site-variables.scss';
+
+.page-content {
+  height: 100vh;
+}
+
+.page-wrap {
+  height: 100vh;
+  overflow: auto;
+
+  &:before {
+    content: "";
+    background-image: url("../../../public/images/trigPic1.jpg");
+    background-size: cover;
+    background-position: center;
+    opacity: 0.4;
+
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+
+    z-index: -1;
+  }
+}

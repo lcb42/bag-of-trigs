@@ -6,7 +6,7 @@ import './App.scss';
 
 import Home from "./pages/Home/Home"
 import Trigs from "./pages/Trigs/Trigs"
-import Page from './templates/page';
+import Page from './templates/Page/Page';
 
 function App() {
   return (
