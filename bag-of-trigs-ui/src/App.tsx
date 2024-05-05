@@ -3,9 +3,9 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-import Home from "./pages/Home/Home"
-import Trigs from "./pages/Trigs/Trigs"
-import Page from './templates/Page/Page';
+import { Home } from "./pages/Home"
+import { Trigs } from "./pages/Trigs"
+import { Page } from './templates/Page';
 
 function App() {
   return (
