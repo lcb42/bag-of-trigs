@@ -1,10 +1,18 @@
+@import 'src/site-variables.scss';
+
+.page-content {
+  height: 100%;
+}
+
 .page-wrap {
   height: 100vh;
   overflow: auto;
+  display: flex;
+  flex-direction: column;
 
   &:before {
     content: "";
-    background-image: url("../public/images/trigPic1.jpg");
+    background-image: url("../../../public/images/trigPic1.jpg");
     background-size: cover;
     background-position: center;
     opacity: 0.4;
@@ -17,9 +25,4 @@
 
     z-index: -1;
   }
-}
-
-.footer-content {
-  margin: auto;
-  color: grey;
 }
